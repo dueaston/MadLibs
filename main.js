@@ -19,25 +19,25 @@ const story = `My friends and I started a secret club! We meet every day by the 
 form.addEventListener("submit", function(event) {
 event.preventDefault();
 
-  if (adj1.value =="") {
+  if (adj1.value ==="") {
     alert(`${adj1.name} must be filled out!`)
     adj1.focus();
-  } else if (noun1.value =="") {
+  } else if (noun1.value ==="") {
     alert(`${noun1.name} must be filled out`);
     noun1.focus();
-  } else if (adj2.value =="") {
+  } else if (adj2.value ==="") {
     alert(`${adj2.name} must be filled out`);
     adj2.focus();
-  } else if (clothing.value =="") {
+  } else if (clothing.value ==="") {
     alert(`${clothing.name} must be filled out`);
     clothing.focus();
-  } else if (bodypart.value =="") {
+  } else if (bodypart.value ==="") {
     alert(`${bodypart.name} must be filled out`);
     bodypart.focus();
-  } else if (verb1.value =="") {
+  } else if (verb1.value ==="") {
     alert(`${verb1.name} must be filled out`);
     verb1.focus();
-  } else if (food.value =="") {
+  } else if (food.value ==="") {
     alert(`${food.name} must be filled out`);
     food.focus();
   } else {
@@ -47,10 +47,11 @@ event.preventDefault();
   
   function madLibStoryDisplay() {
   madLibDisplay.innerHTML = story
-  replace(`${adj1}`, adj1.value);
-  replace(`${noun1}`, noun1.value);
-  replace(`${adj2}`, adj2.value);
-  replace(`${clothing}`, clothing.value);
-  replace(`${bodypart}`, bodypart.value);
-  replace(`${verb1}`, verb1.value);
-  replace(`${food}`, food.value);}
+  .replace(`${adj1}`, adj1.value)
+  .replace(`${noun1}`, noun1.value)
+  .replace(`${adj2}`, adj2.value)
+  .replace(`${clothing}`, clothing.value)
+  .replace(`${bodypart}`, bodypart.value)
+  .replace(`${verb1}`, verb1.value)
+  .replace(`${food}`, food.value);
+}
